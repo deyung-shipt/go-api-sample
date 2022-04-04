@@ -1,6 +1,7 @@
 kind: pipeline
 type: kubernetes
 name: test
+
 workspace:
   base: /go
   path: src/github.com/deyung-shipt/${DRONE_REPO_NAME}
