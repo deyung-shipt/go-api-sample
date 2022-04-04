@@ -1,0 +1,19 @@
+kind: pipeline
+name: test
+workspace:
+  base: /go
+  path: src/github.com/deyung-shipt/${DRONE_REPO_NAME}
+
+trigger:
+  event:
+    - push
+    - pull_request
+    - tag
+
+steps:
+  - name: test
+    image: golang:1.15.6-alpine3.12
+    commands:
+      - apk add bash curl git make g++ gcc
+      - go test -coverprofile=coverage.txt ./...
+  
