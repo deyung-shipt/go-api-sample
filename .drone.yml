@@ -15,7 +15,7 @@ trigger:
 services:
   - name: db
     image: cockroachdb/cockroach:latest
-    command:
+    commands:
       - cockroach start-single-node --insecure
     
 steps:
