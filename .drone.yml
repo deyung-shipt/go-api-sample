@@ -14,7 +14,7 @@ trigger:
 
 steps:
   - name: test
-    image: golang:1.15.6-alpine3.12
+    image: golang:latest
     commands:
       - apk add bash curl git make g++ gcc
       - go test -coverprofile=coverage.txt ./...
