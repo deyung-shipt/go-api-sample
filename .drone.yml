@@ -16,7 +16,7 @@ services:
   - name: db
     image: cockroachdb/cockroach:latest
     command:
-      - start-single-node --insecure
+      - cockroach start-single-node --insecure
     
 steps:
   - name: test
