@@ -13,7 +13,7 @@ trigger:
     - tag
 
 services:
-  - name: db
+  - name: cockroachdb
     image: cockroachdb/cockroach:latest
     commands:
       - cockroach start-single-node --insecure
