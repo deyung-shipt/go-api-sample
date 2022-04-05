@@ -15,6 +15,5 @@ steps:
   - name: test
     image: golang:latest
     commands:
-      - apk add bash curl git make g++ gcc
       - go test -coverprofile=coverage.txt ./...
   
